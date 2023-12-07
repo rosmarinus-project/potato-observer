@@ -29,6 +29,8 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "eventemitter3": "^5.0.1",
+    "intersection-observer": "^0.12.2",
     "tslib": "^2.6.2"
   },
   "devDependencies": {

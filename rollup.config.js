@@ -17,7 +17,7 @@ function getConfig(format, banner = undefined) {
       sourcemap: true,
     },
     external,
-    plugins: [common()],
+    plugins: [common({})],
   });
 }
 
