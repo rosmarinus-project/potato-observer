@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    if: github.repository == 'rosmarinus-project/template-name'
+    if: github.repository == 'rosmarinus-project/potato-observer'
     runs-on: ubuntu-latest
     permissions:
       contents: read
