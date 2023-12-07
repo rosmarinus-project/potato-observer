@@ -8,16 +8,25 @@ const external = [];
  * @param {string | undefined} banner
  */
 function getConfig(format, banner = undefined) {
+  const outDir = `dist/${format}`;
+
   return defineConfig({
     input: 'src/index.ts',
     output: {
-      file: `dist/${format}/index.js`,
+      dir: outDir,
       format,
       banner,
       sourcemap: true,
     },
     external,
-    plugins: [common({})],
+    plugins: [
+      common({
+        ts: {
+          outDir,
+          declarationDir: outDir,
+        },
+      }),
+    ],
   });
 }
 
